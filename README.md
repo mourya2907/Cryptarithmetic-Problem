@@ -1,7 +1,6 @@
-
 <h1>ExpNo 8 : Solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python</h1> 
-<h3>Name: Gunasundari B </h3>
-<h3>Register Number/Staff Id: 212224040093 </h3>
+<h3>Name:  Mourya G          </h3>
+<h3>Register Number: 212224230170     </h3>
 <H3>Aim:</H3>
 <p>
     To solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python
@@ -79,22 +78,26 @@ MORE = 1085<br>
 <hr>
 MONEY = 10652<br>
 <hr>
-## Program:
+
+## PROGRAM:
 ```
 from itertools import permutations
 def solve_cryptarithmetic():
     for perm in permutations(range(10), 8):
         S, E, N, D, M, O, R, Y = perm
-        # Check for leading zeros
         if S == 0 or M == 0:
             continue
+
         SEND = 1000 * S + 100 * E + 10 * N + D
         MORE = 1000 * M + 100 * O + 10 * R + E
         MONEY = 10000 * M + 1000 * O + 100 * N + 10 * E + Y
+
         if SEND + MORE == MONEY:
             return SEND, MORE, MONEY
+
     return None
 solution = solve_cryptarithmetic()
+
 if solution:
     SEND, MORE, MONEY = solution
     print(f'SEND = {SEND}')
@@ -104,8 +107,8 @@ else:
     print("No solution found.")
 ```
 
-## Output:
-<img width="531" height="303" alt="505744866-ed7ae38a-7588-472f-87ad-745f653a8ff3" src="https://github.com/user-attachments/assets/a2404bbb-bd52-48ea-802a-50d2179129db" />
+## OUTPUT:
+<img width="187" height="102" alt="image" src="https://github.com/user-attachments/assets/3c622c8c-b141-4598-9763-6939d4ba1b4a" />
 
 <h2>Result:</h2>
 <p> Thus a Cryptarithmetic Problem was solved using Python successfully</p>
